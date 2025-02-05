@@ -17,10 +17,4 @@ useHead({
     return title ? `${title} - Kochbuch` : "Kochbuch";
   },
 });
-
-// onMounted(() => {
-//   document
-//     .querySelector('meta[name="theme-color"]')
-//     .setAttribute("content", "#123456");
-// });
 </script>

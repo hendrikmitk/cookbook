@@ -108,7 +108,6 @@ function bindWrapper(item) {
               Download .cook ↓
             </a>
           </div>
-          <!-- </ul> -->
 
           <h2>Zutaten</h2>
           <IngredientsList :ingredients="ingredients" />
