@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps({
   name: String,
-  quantity: Number,
+  quantity: Number | String,
   type: String,
   underline: { type: Boolean, default: false },
   units: String,
@@ -16,6 +16,11 @@ const props = defineProps({
 
 <style scoped>
 .ingredient {
+  display: inline-block;
   text-decoration: underline;
+}
+
+.ingredient::first-letter {
+  text-transform: lowercase;
 }
 </style>

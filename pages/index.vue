@@ -24,9 +24,9 @@ const recipes = computed(() => {
 
 <template>
   <r-grid columns="8">
-    <r-cell span="1-7" span-s="1-6"><h1>Cookbook</h1></r-cell>
+    <r-cell span="1-7" span-s="1-6"><h1>Kochbuch</h1></r-cell>
     <r-cell span-s="7-8" class="list_link-container">
-      <h3><NuxtLink to="/shopping-list">List →</NuxtLink></h3>
+      <h3><NuxtLink to="/shopping-list">Liste →</NuxtLink></h3>
     </r-cell>
     <r-cell span="row">
       <input aria-label="Search" type="search" v-model="searchTerm" />

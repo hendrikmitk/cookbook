@@ -35,7 +35,7 @@ function sort(something, key = "name") {
         <h3><NuxtLink to="/">↩ Home</NuxtLink></h3>
       </r-cell>
       <r-cell span="row">
-        <h1>List</h1>
+        <h1>Liste</h1>
         <input
           aria-label="Search"
           type="search"
@@ -53,7 +53,7 @@ function sort(something, key = "name") {
       </r-cell>
       <r-cell span="6-8" span-s="row" class="list-button-container">
         <button @click="removeFromList(item.name)">
-          <h3>Remove from List</h3>
+          <h3>Von Liste entfernen</h3>
         </button>
       </r-cell>
       <r-cell span="1-6" span-s="row">
@@ -92,7 +92,7 @@ function sort(something, key = "name") {
 
     <r-grid>
       <r-cell span="row" v-if="!store.list.length">
-        <h2>Nothing in list</h2>
+        <h2>Liste ist leer</h2>
       </r-cell>
     </r-grid>
   </ClientOnly>

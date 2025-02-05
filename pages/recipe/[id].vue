@@ -39,7 +39,7 @@ function addRecipeToList() {
 }
 
 const addToListButtonText = computed(() =>
-  hasRecipeInList.value ? "Added to List" : "Add to List"
+  hasRecipeInList.value ? "Zur Liste hinzugefügt" : "Zur Liste hinzufügen"
 );
 
 let hours;
@@ -75,7 +75,7 @@ function bindWrapper(item) {
         <h3><NuxtLink to="/">↩ Home</NuxtLink></h3>
       </r-cell>
       <r-cell span-s="5-8" class="list_link-container">
-        <h3><NuxtLink to="/shopping-list">List →</NuxtLink></h3>
+        <h3><NuxtLink to="/shopping-list">Liste →</NuxtLink></h3>
       </r-cell>
     </r-grid>
 
@@ -91,13 +91,13 @@ function bindWrapper(item) {
         </r-cell>
         <r-cell span="1-2" span-s="row">
           <div v-if="isVegan">Vegan</div>
-          <div v-if="hasServings">Serves: {{ metadata.servings }}</div>
+          <div v-if="hasServings">Portionen: {{ metadata.servings }}</div>
           <div v-if="hasTime">
             ⌚︎ <span v-if="!!hours">{{ hours }}h </span>
             <span v-if="minutes > 0">{{ minutes }}m</span>
           </div>
           <div v-if="hasSource">
-            <a target="_blank" :href="metadata.source"> Source ↗ </a>
+            <a target="_blank" :href="metadata.source"> Quelle ↗ </a>
           </div>
 
           <div>
@@ -110,7 +110,7 @@ function bindWrapper(item) {
           </div>
           <!-- </ul> -->
 
-          <h2>Ingredients</h2>
+          <h2>Zutaten</h2>
           <IngredientsList :ingredients="ingredients" />
 
           <h2 v-if="cookwares?.length">Equipment</h2>
@@ -122,7 +122,7 @@ function bindWrapper(item) {
           </ul>
         </r-cell>
         <r-cell span="3-8" span-s="row" class="steps">
-          <h2>Steps</h2>
+          <h2>Schritte</h2>
           <ol>
             <li v-for="step in steps">
               <component

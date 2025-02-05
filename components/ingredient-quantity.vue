@@ -1,8 +1,16 @@
 <script setup>
-import { prettyFractions } from "~/utils/pretty-fractions";
-const props = defineProps(["quantity", "units"]);
+import { prettyFractions } from '~/utils/pretty-fractions';
+const props = defineProps(['quantity', 'units']);
+
+const sanitizeQuantity = (rawQuantity) => {
+  if (!isNaN(Number(rawQuantity))) {
+    return prettyFractions(rawQuantity);
+  } else {
+    return 'Etwas';
+  }
+};
 </script>
 
 <template>
-  {{ prettyFractions(quantity) }}{{ units.length > 2 ? ` ${units}` : units }}
+  {{ sanitizeQuantity(quantity) }} {{ units }}
 </template>

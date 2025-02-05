@@ -14,7 +14,7 @@ await store.getRecipes();
 
 useHead({
   titleTemplate: (title) => {
-    return title ? `${title} - Cookbook` : "Cookbook";
+    return title ? `${title} - Kochbuch` : "Kochbuch";
   },
 });
 
