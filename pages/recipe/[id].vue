@@ -103,7 +103,8 @@ function bindWrapper(item) {
           <div>
             <a
               target="_blank"
-              :href="`/recipes/${getFilename(metadata.import_path)}.cook`"
+              :href="`../recipes/${getFilename(metadata.import_path)}.cook`"
+              :download="`${getFilename(metadata.import_path)}.cook`"
             >
               Download .cook ↓
             </a>
