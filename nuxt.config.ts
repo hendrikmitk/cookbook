@@ -3,13 +3,15 @@ import cooklang from "vite-plugin-cooklang";
 
 const sw = process.env.SW === "true";
 
+const baseUrl = "/cookbook";
+
 export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "de",
       },
-      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+      link: [{ rel: "icon", type: "image/svg+xml", href: `${baseUrl}/favicon.svg` }],
       meta: [
         {
           name: "theme-color",
